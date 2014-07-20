@@ -193,9 +193,9 @@ class updateEntry(webapp2.RequestHandler):
 		</div>
 		<div data-role="navbar">
 			<ul>
-				<li><a href="">View All</a></li>
-				<li><a href="/select">Filter People</a></li>
-				<li><a href="/enter">Add Person</a></li>
+				<li><a href="">View All Contacts</a></li>
+				<li><a href="/select">Filter Through Contacts</a></li>
+				<li><a href="/enter">Add A Contact</a></li>
 			</ul>
 		</div>""")
 		formOutput = (FORM_INPUT % (cgi.escape(user.fName), cgi.escape(user.lName), cgi.escape(user.street), cgi.escape(user.city), cgi.escape(user.zipCode), cgi.escape(user.phone), cgi.escape(user.email)))
@@ -212,9 +212,9 @@ class enterPage(webapp2.RequestHandler):
 		</div>
 		<div data-role="navbar">
 			<ul>
-				<li><a href="/">View All</a></li>
-				<li><a href="/select">Filter People</a></li>
-				<li><a href="#" class="ui-btn-active">Add Person</a></li>
+				<li><a href="/">View All Contacts</a></li>
+				<li><a href="/select">Filter Through Contacts</a></li>
+				<li><a href="#" class="ui-btn-active">Add A Contact</a></li>
 			</ul>
 		</div>""")
 
@@ -247,9 +247,9 @@ class selectEntry(webapp2.RequestHandler):
 		</div>
 		<div data-role="navbar">
 			<ul>
-				<li><a href="/">View All</a></li>
-				<li><a href="/select" class="ui-btn-active">Filter People</a></li>
-				<li><a href="/enter">Add Person</a></li>
+				<li><a href="/">View All Contacts</a></li>
+				<li><a href="/select" class="ui-btn-active">Filter Through Contacts</a></li>
+				<li><a href="/enter">Add A Contacts</a></li>
 			</ul>
 		</div>""")
 		self.response.write("""
@@ -289,9 +289,9 @@ class filterQuery(webapp2.RequestHandler):
 		</div>
 		<div data-role="navbar">
 			<ul>
-				<li><a href="/">View All</a></li>
-				<li><a href="/select">Filter People</a></li>
-				<li><a href="/enter">Add Person</a></li>
+				<li><a href="/">View All Contacts</a></li>
+				<li><a href="/select">Filter Trough Contacts</a></li>
+				<li><a href="/enter">Add A Contact</a></li>
 			</ul>
 		</div>""")
 		self.response.write("<br><h2 class='ui-header ui-bar-b'>Results</h2><br>")
