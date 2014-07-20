@@ -329,10 +329,10 @@ class image(webapp2.RequestHandler):
 
 application = webapp2.WSGIApplication([
 	('/', viewPage),
-	('/new', enterPage),
+	('/enter', enterPage),
 	('/add', uploadAll),
 	('/query', filterQuery),
 	('/update', updateEntry),
 	('/delete',deleteEntry),
-	('/search',selectEntry),
+	('/select',selectEntry),
 	('/img', image), ], debug=True)
