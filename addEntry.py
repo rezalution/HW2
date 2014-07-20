@@ -101,7 +101,7 @@ FORM_INPUT = """
 	<label for='zipCode'>Zip Code</label>
 	<input type='text' name='zipCode' id='zipCode' value='%s'><br>
 
-	<label for='phone'>Phone (no dashes or spaces)</label>
+	<label for='phone'>Phone (No /,-, or spaces)</label>
 	<input type='text' name='phone' id='phone' maxlength='10' value='%s'><br>
 
 	<label for='email'>Email</label>
