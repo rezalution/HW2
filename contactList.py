@@ -138,7 +138,7 @@ class viewPage(webapp2.RequestHandler):
 	def get(self):
 		self.response.write(MAIN_HEADER % 'View Contacts')
 		self.response.write("""
-			<h1>Address Book</h1>
+			<h1>Contact List</h1>
 		</div>
 		<div data-role="navbar">
 			<ul>
@@ -189,7 +189,7 @@ class updateEntry(webapp2.RequestHandler):
 		user = db.get(self.request.get('person'))
 		self.response.write(MAIN_HEADER % 'Update Contact')
 		self.response.write("""
-			<h1>Address Book</h1>
+			<h1>Contact List</h1>
 		</div>
 		<div data-role="navbar">
 			<ul>
@@ -208,7 +208,7 @@ class enterPage(webapp2.RequestHandler):
 	def get(self):
 		self.response.write(MAIN_HEADER % 'New Entry')
 		self.response.write("""
-			<h1>Address Book</h1>
+			<h1>Contact List</h1>
 		</div>
 		<div data-role="navbar">
 			<ul>
@@ -243,7 +243,7 @@ class selectEntry(webapp2.RequestHandler):
 	def get(self):
 		self.response.write(MAIN_HEADER % 'Select Entries')
 		self.response.write("""
-			<h1>Address Book</h1>
+			<h1>Contact List</h1>
 		</div>
 		<div data-role="navbar">
 			<ul>
@@ -285,7 +285,7 @@ class filterQuery(webapp2.RequestHandler):
 		#contacts = User.gql("WHERE fName = 'Elmer'")
 		contacts = User.gql(queryString)
 		self.response.write("""
-			<h1>Address Book</h1>
+			<h1>Contact List</h1>
 		</div>
 		<div data-role="navbar">
 			<ul>
