@@ -1,4 +1,5 @@
-# This is a Google App Engine, deployed and running at:
+# Reza Busheri
+# HW2
 
 import cgi
 import urllib2
@@ -141,9 +142,9 @@ class viewPage(webapp2.RequestHandler):
 		</div>
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#" class="ui-btn-active">View All</a></li>
-				<li><a href="/select">Filter People</a></li>
-				<li><a href="/enter">Add Person</a></li>
+				<li><a href="#" class="ui-btn-active">View All People</a></li>
+				<li><a href="/select">Filter Through People</a></li>
+				<li><a href="/enter">Add A Person</a></li>
 			</ul>
 		</div>""")
 		self.response.write("<br><h2 class='ui-header ui-bar-b'>Current Contacts</h2><br>")
