@@ -150,9 +150,7 @@ class viewPage(webapp2.RequestHandler):
 		self.response.write("<br><h2 class='ui-header ui-bar-b'>Current Contacts</h2><br>")
 		self.response.write("<div class='ui-grid-d'>")
 		contacts = User.gql(" ORDER BY lName ASC")
-		#User.query(db.AND(User._properties['state'] == 'OK'),User._properties['fName'] == 'Daniel')
-		# contacts = User.query()
-		# 	self.response.write('<h6>' + str(contact.key) + '</h6>')
+
 		column = 0
 		for contact in contacts:
 			if column % 5 == 0:
@@ -206,7 +204,7 @@ class updateEntry(webapp2.RequestHandler):
 class enterPage(webapp2.RequestHandler):
 
 	def get(self):
-		self.response.write(MAIN_HEADER % 'New Entry')
+		self.response.write(MAIN_HEADER % 'New Contact')
 		self.response.write("""
 			<h1>Contact List</h1>
 		</div>
@@ -241,7 +239,7 @@ class uploadAll(webapp2.RequestHandler):
 
 class selectEntry(webapp2.RequestHandler):
 	def get(self):
-		self.response.write(MAIN_HEADER % 'Select Entries')
+		self.response.write(MAIN_HEADER % 'Select Contacts')
 		self.response.write("""
 			<h1>Contact List</h1>
 		</div>
@@ -278,7 +276,7 @@ class selectEntry(webapp2.RequestHandler):
 
 class filterQuery(webapp2.RequestHandler):
 	def post(self):
-		self.response.write(MAIN_HEADER % 'Query Results')
+		self.response.write(MAIN_HEADER % 'Search Results')
 		queryField = self.request.get('query')
 		queryValue = self.request.get('value')
 		queryString = (" WHERE %s = '%s' ") % (queryField, queryValue)
@@ -319,8 +317,6 @@ class filterQuery(webapp2.RequestHandler):
 			self.response.write('<a href="/delete?person=%s" class="ui-bar-b" data-role="button" data-inline="true" data-icon="delete">Delete</a>' % contact.key())
 			self.response.write('</div></div>')
 			column = column + 1
-
-# Application to display image
 
 class image(webapp2.RequestHandler):
     def get(self):
