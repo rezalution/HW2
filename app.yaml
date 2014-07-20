@@ -1,4 +1,4 @@
-application: Google App Engine
+application: secret-bloom-647
 version: 1
 runtime: python27
 api_version: 1
