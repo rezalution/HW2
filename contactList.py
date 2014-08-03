@@ -1,5 +1,5 @@
 # Reza Busheri
-# HW2
+# HW 2
 
 import cgi
 import urllib2
